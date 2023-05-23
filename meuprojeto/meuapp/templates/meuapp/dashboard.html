@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meu App - Dashboard</title>
+    <style>
+        .logout-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem vindo ao Dashboard</h1>
+  
+    <p>Olá, {{ user.username }}!</p>
+
+    <button onclick="location.href='{% url 'produto_list' %}'" class="btn-primary">Lista de Produtos</button>
+    <button onclick="location.href='{% url 'cliente_list' %}'" class="btn-primary">Lista de Clientes</button>
+
+</body>
+</html>
+{% endblock %}
