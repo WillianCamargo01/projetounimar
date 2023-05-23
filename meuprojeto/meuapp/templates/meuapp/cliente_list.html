@@ -3,9 +3,9 @@
 {% block content %}
 <h1>Clientes</h1>
 
-<a href="{% url 'create_update_cliente' %}">Adicionar novo cliente</a>
+<a href="{% url 'create_update_cliente' %}" class="btn btn-primary">Adicionar novo cliente</a>
 
-<table id="myTable">
+<table id="myTable" class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -23,8 +23,8 @@
             <td>{{ cliente.email }}</td>
             <td>{{ cliente.telefone }}</td>
             <td>
-                <a href="{% url 'create_update_cliente' cliente.id %}" class="btn-success">Editar</a>
-                <a href="{% url 'delete_cliente' cliente.id %}" class="btn-danger">Excluir</a>
+                <a href="{% url 'create_update_cliente' cliente.id %}" class="btn btn-success">Editar</a>
+                <a href="{% url 'delete_cliente' cliente.id %}" class="btn btn-danger delete">Excluir</a>
             </td>
         </tr>
         {% endfor %}

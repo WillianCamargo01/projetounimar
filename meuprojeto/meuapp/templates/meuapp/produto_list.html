@@ -3,9 +3,9 @@
 {% block content %}
 <h1>Produtos</h1>
 
-<a href="{% url 'create_update_produto' %}">Adicionar novo produto</a>
+<a href="{% url 'create_update_produto' %}" class="btn btn-primary">Adicionar novo produto</a>
 
-<table id="myTable">
+<table id="myTable" class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -23,12 +23,11 @@
             <td>{{ produto.tipo }}</td>
             <td>{{ produto.codigo }}</td>
             <td>
-                <a href="{% url 'update_produto' produto.id %}"class="btn-success">Editar</a>
-                <a href="{% url 'delete_produto' produto.id %}" class="btn-danger">Excluir</a>
+                <a href="{% url 'update_produto' produto.id %}" class="btn btn-success">Editar</a>
+                <a href="{% url 'delete_produto' produto.id %}" class="btn btn-danger delete">Excluir</a>
             </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 {% endblock %}
-
